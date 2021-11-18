@@ -37,7 +37,8 @@
       }
 
       // Themes
-      const Themes = left.oak.getThemeNames()
+      left.oak.start()
+      const Themes = left.oak.themeNames
 
       // Menu
 
@@ -143,7 +144,7 @@
       Themes.map((theme) => {
         left.controller.add("default", "Themes", theme, () => {
           console.log(`[Theme]: ${theme}`)
-          var themeData = left.oak.getTheme(theme)
+          var themeData = left.oak.returnThemeByName(theme)
           left.theme.load(themeData)
         }, "")
       })
