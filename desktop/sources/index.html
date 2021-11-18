@@ -39,6 +39,8 @@
       // Themes
       left.oak.start()
       const Themes = left.oak.themeNames
+      const lightThemes = left.oak.lightThemeNames
+      const darkThemes = left.oak.darkThemeNames
 
       // Menu
 
@@ -141,14 +143,23 @@
       left.controller.add('operator', 'Find', 'Find Next', () => { left.operator.find_next() }, 'CmdOrCtrl+N')
       left.controller.add('operator', 'Operator', 'Stop', () => { left.operator.stop() }, 'Esc')
 
-      Themes.map((theme) => {
+      left.controller.addSpacer('default', 'Themes', 'DarkThemes')
+      darkThemes.map((theme) => {
         left.controller.add("default", "Themes", theme, () => {
           console.log(`[Theme]: ${theme}`)
           var themeData = left.oak.returnThemeByName(theme)
           left.theme.load(themeData)
         }, "")
       })
-      left.controller.addSpacer('default', 'Themes', 'Theme')
+      left.controller.addSpacer('default', 'Themes', 'LightThemes')
+      lightThemes.map((theme) => {
+        left.controller.add("default", "Themes", theme, () => {
+          console.log(`[Theme]: ${theme}`)
+          var themeData = left.oak.returnThemeByName(theme)
+          left.theme.load(themeData)
+        }, "")
+      })
+      left.controller.addSpacer('default', 'Themes', 'ThemeOptions')
       left.controller.add("default","Themes","Open Theme",() => { left.theme.open() },"CmdOrCtrl+Shift+O")
       left.controller.add("default","Themes","Reset Theme",() => { left.theme.reset() },"CmdOrCtrl+Shift+Backspace")
       left.controller.addSpacer('default', 'Themes', 'Download')
