@@ -165,6 +165,11 @@
       left.controller.addSpacer('default', 'Themes', 'Download')
       left.controller.add("default","Themes","Download Themes..",() => { require('electron').shell.openExternal('https://github.com/hundredrabbits/Themes') })
 
+      left.controller.addSpacer('default', 'Fonts', 'Fonts')
+      left.font.fonts.map((font, index) => {
+        left.controller.add("default", "Fonts", font, () => { left.font.fontIndex = index; left.font.updateVariables(); },'')
+      })
+
       left.controller.commit()
       left.branch.setMenu(left.controller.docs())
       left.branch.start()
