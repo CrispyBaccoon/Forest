@@ -1,3 +1,4 @@
+/* # Custom Fonts */
 @font-face {
   font-family: "custom_mono";
   src: url("../media/fonts/mono.ttf") format("truetype");
@@ -19,22 +20,23 @@
   font-style: normal;
 }
 
+/* # Fira Code */
 @font-face {
-  font-family: "custom_mono";
+  font-family: "Fira Code Retina";
   src: url("../media/fonts/FiraCode-Retina.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "custom_serif";
+  font-family: "Fira Code Regular";
   src: url("../media/fonts/FiraCode-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "custom_sans_serif";
+  font-family: "Fira Code SemiBold";
   src: url("../media/fonts/FiraCode-SemiBold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
