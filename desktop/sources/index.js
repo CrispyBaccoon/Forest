@@ -722,6 +722,28 @@ const handleWindowControls = () => {
     win.close();
   });
 
+  document
+    .getElementById("window-controls")
+    .addEventListener("mouseout", (event) => {
+      var windowIcons = document.getElementsByClassName("windowIcon");
+      for (var i = 0; i < windowIcons.length; i++) {
+        windowIcons[i].style.fill = "var(--b_med)";
+      }
+    });
+
+  var windowIcons = document.getElementsByClassName("windowIcon");
+  for (var i = 0; i < windowIcons.length; i++) {
+    windowIcons[i].style.fill = "var(--b_med)";
+  }
+
+  document
+    .getElementById("window-controls")
+    .addEventListener("mouseover", (event) => {
+      closeIcon.style.fill = "var(--b_inv)";
+      minimizeIcon.style.fill = "var(--f_low)";
+      maximizeIcon.style.fill = "var(--f_high)";
+    });
+
   // Toggle maximise/restore buttons when maximisation/restoring occurs
   toggleMaxRestoreButtons();
   win.on("maximize", toggleMaxRestoreButtons);
