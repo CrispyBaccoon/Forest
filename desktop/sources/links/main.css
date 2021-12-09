@@ -14,9 +14,9 @@
 
 #window-controls {
   display: grid;
-  grid-template-columns: repeat(3, 46px);
+  grid-template-columns: repeat(3, 26px);
   position: absolute;
-  left: 0;
+  left: 10px;
   top: 0;
   right: auto;
   height: 100%;
