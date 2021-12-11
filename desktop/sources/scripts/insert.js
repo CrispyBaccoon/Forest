@@ -86,11 +86,11 @@ function Insert() {
     const isMultiline = left.selected().match(/[^\r\n]+/g);
 
     if (left.prev_character() === EOL && !isMultiline) {
-      left.inject("-- ");
+      left.inject("// ");
     } else if (isMultiline) {
-      left.inject_multiline("-- ");
+      left.inject_multiline("// ");
     } else {
-      left.inject_line("-- ");
+      left.inject_line("// ");
     }
     this.stop();
   };
