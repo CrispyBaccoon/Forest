@@ -104,7 +104,7 @@ function Page(text = "", path = null) {
       } else if (line.substr(0, 2) === "//") {
         a.push({
           id: a.length,
-          text: line.replace("--", "").trim(),
+          text: line.replace("//", "").trim(),
           line: parseInt(id),
           type: "comment",
         });
