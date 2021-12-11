@@ -237,7 +237,7 @@ const LoadMenu = () => {
     () => {
       left.navi.next_page();
     },
-    "CmdOrCtrl+]"
+    "CmdOrCtrl+'"
   );
   left.controller.add(
     "default",
@@ -246,7 +246,7 @@ const LoadMenu = () => {
     () => {
       left.navi.prev_page();
     },
-    "CmdOrCtrl+["
+    "CmdOrCtrl+;"
   );
   left.controller.add(
     "default",
