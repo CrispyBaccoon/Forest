@@ -101,7 +101,7 @@ function Page(text = "", path = null) {
           line: parseInt(id),
           type: "header",
         });
-      } else if (line.substr(0, 2) === "--") {
+      } else if (line.substr(0, 2) === "//") {
         a.push({
           id: a.length,
           text: line.replace("--", "").trim(),
