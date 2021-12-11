@@ -169,10 +169,14 @@ body navi > ul li.active.subheader::before {
   content: "•";
 }
 body navi > ul li.active.comment::before {
-  content: "•";
+  content: "//";
 }
 body navi > ul li.active.page::before {
   content: "/";
+}
+body navi > ul li .LineNumber {
+  float: right;
+  padding-right: 8px;
 }
 body stats {
   display: block;
