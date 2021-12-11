@@ -41,7 +41,7 @@ function Navi() {
       current && current.line === marker.line ? "active" : ""
     }' onclick='left.go.to_page(${pid}, ${marker.line})'><span>${
       marker.text
-    }</span></li>`;
+    }</span><span class="LineNumber">${marker.line}</span></li>`;
   };
 
   this.next_page = function () {
