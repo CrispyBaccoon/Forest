@@ -1,9 +1,11 @@
-'use strict'
+"use strict";
 
-const Page = require('./page')
+const Page = require("./page");
 
-function Splash () {
-  Page.call(this, `# Welcome
+function Splash() {
+  Page.call(
+    this,
+    `# Welcome
 
 ## Guide
 
@@ -43,15 +45,16 @@ View sources: https://github.com/hundredrabbits/left
 -- Themes
 
 Download additional themes: http://hundredrabbits.itch.io/Left
-`)
+`
+  );
 
   this.name = function () {
-    return 'Splash'
-  }
+    return "Splash";
+  };
 
   this.has_changes = function () {
-    return false
-  }
+    return false;
+  };
 }
 
-module.exports = Splash
+module.exports = Splash;
