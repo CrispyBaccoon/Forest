@@ -2,6 +2,7 @@
 
 const { shell, remote } = require("electron");
 const Left = require("./left");
+const Splash = require("./scripts/splash");
 const Oak = require("./scripts/oak");
 const { app } = remote;
 const EOL = "\n";
@@ -34,6 +35,16 @@ const LoadMenu = () => {
       shell.openExternal("https://github.com/CrispyBaccoon/Forest");
     },
     "CmdOrCtrl+,"
+  );
+  left.controller.add(
+    "default",
+    "*",
+    "Splash",
+    () => {
+      left.project.pages.push(new Splash());
+      left.go.to_page(left.project.pages.length);
+    },
+    ""
   );
   left.controller.add(
     "default",
