@@ -39,6 +39,9 @@ navi > ul.active li.page {
 navi > ul.active li.active {
   color: var(--f_high) !important;
 }
+navi > ul.active li.comment {
+  color: var(--f_low) !important;
+}
 navi li {
   color: var(--f_med) !important;
 }
