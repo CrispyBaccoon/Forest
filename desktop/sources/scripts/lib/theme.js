@@ -40,6 +40,7 @@ function Theme(_default) {
     if (this.callback) {
       this.callback();
     }
+    return true;
   };
 
   this.reset = function () {
