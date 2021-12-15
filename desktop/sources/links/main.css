@@ -171,7 +171,10 @@ body navi > ul li.active.subheader::before {
 body navi > ul li.active.comment::before {
   content: "//";
 }
-body navi > ul li.active.page::before {
+/* body navi > ul li.active.page::before { */
+/* content: "/"; */
+/* } */
+body navi > ul.active li.page::before {
   content: "/";
 }
 body navi > ul li .LineNumber {
