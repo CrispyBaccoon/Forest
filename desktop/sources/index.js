@@ -637,9 +637,7 @@ const LoadMenu = () => {
       "Themes",
       theme,
       () => {
-        console.log(`[Theme]: ${theme}`);
-        var themeData = left.oak.returnThemeByName(theme);
-        left.theme.load(themeData);
+        left.oak.loadTheme(theme);
       },
       ""
     );

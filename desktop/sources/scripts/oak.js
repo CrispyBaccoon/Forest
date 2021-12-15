@@ -5,6 +5,8 @@ function Oak() {
   this.darkThemeNames = [];
   this.lightThemeNames = [];
 
+  this.activeTheme = "";
+
   this.collectThemeNames = () => {
     console.log("Oak", "Getting Themes..");
     const fs = require("fs");
@@ -20,6 +22,16 @@ function Oak() {
   this.start = () => {
     this.collectThemeNames();
     this.sortThemeNames();
+  };
+
+  this.loadTheme = (theme) => {
+    console.log(`[Theme]: ${theme}`);
+    var themeData = this.returnThemeByName(theme);
+    if (left.theme.load(themeData)) {
+      this.activeTheme = theme;
+    } else {
+      return;
+    }
   };
 
   this.sortThemeNames = () => {
