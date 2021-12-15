@@ -12,6 +12,11 @@
   padding: 0;
 }
 
+#main,
+#titlebar {
+  height: 0;
+}
+
 #window-controls {
   display: grid;
   grid-template-columns: repeat(3, 20px);
