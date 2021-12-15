@@ -660,6 +660,16 @@ const LoadMenu = () => {
   left.controller.add(
     "default",
     "Themes",
+    "Toggle Show Active Theme",
+    () => {
+      left.stats.showActiveTheme = !left.stats.showActiveTheme;
+      left.stats.update();
+    },
+    "CmdOrCtrl+Shift+O"
+  );
+  left.controller.add(
+    "default",
+    "Themes",
     "Open Theme",
     () => {
       left.theme.open();

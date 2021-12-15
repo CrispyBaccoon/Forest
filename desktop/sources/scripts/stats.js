@@ -4,6 +4,7 @@ const EOL = "\n";
 
 function Stats() {
   this.el = document.createElement("stats");
+  this.showActiveTheme = false;
 
   this.install = function (host) {
     host.appendChild(this.el);
@@ -34,9 +35,11 @@ function Stats() {
     const date = new Date();
     return `${stats.l}L ${stats.w}W ${stats.v}V ${stats.c}C ${stats.p}% <span ${
       stats.a
-    }>AI</span> <span class='right'>${date.getHours()}:${(
-      "0" + date.getMinutes()
-    ).slice(-2)}</span>`;
+    }>AI</span> <span class='right'>${
+      left.oak.activeTheme != "" && this.showActiveTheme
+        ? `${left.oak.activeTheme} - `
+        : ""
+    }${date.getHours()}:${("0" + date.getMinutes()).slice(-2)}</span>`;
   };
 
   this.incrementSynonym = function () {
