@@ -665,7 +665,7 @@ const LoadMenu = () => {
       left.stats.showActiveTheme = !left.stats.showActiveTheme;
       left.stats.update();
     },
-    "CmdOrCtrl+Shift+O"
+    "CmdOrCtrl+T"
   );
   left.controller.add(
     "default",
