@@ -14,12 +14,11 @@ function Branch() {
   };
 
   this.inject = () => {
-    document
-      .getElementById("titlebar")
-      .addEventListener("contextmenu", (event) => {
-        event.preventDefault();
-        Menu.buildFromTemplate(this.format()).popup();
-      });
+    //   .getElementById("titlebar")
+    document.body.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+      Menu.buildFromTemplate(this.format()).popup();
+    });
   };
 
   this.format = function () {
