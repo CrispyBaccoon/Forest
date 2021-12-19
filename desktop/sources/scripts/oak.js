@@ -20,6 +20,11 @@ function Oak() {
   };
 
   this.start = () => {
+    console.log("Oak", "Starting..");
+    if (isJson(localStorage.activeTheme)) {
+      const storage = JSON.parse(localStorage.activeTheme);
+      this.loadTheme(storage);
+    }
     this.collectThemeNames();
     this.sortThemeNames();
   };
@@ -28,6 +33,7 @@ function Oak() {
     console.log(`[Theme]: ${theme}`);
     var themeData = this.returnThemeByName(theme);
     if (left.theme.load(themeData)) {
+      localStorage.setItem("activeTheme", JSON.stringify(theme));
       this.activeTheme = theme;
     } else {
       return;
