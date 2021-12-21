@@ -168,7 +168,7 @@ body navi > ul.active li.marker {
   display: block;
 }
 body navi > ul li.active.header::before {
-  content: "•";
+  content: "#";
 }
 body navi > ul li.active.subheader::before {
   content: "•";
