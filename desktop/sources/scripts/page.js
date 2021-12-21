@@ -12,6 +12,15 @@ function Page(text = "", path = null) {
 
   this.name = function () {
     if (!this.path) {
+      if (this.markers().length) {
+        if (this.markers().filter((m) => m.type == "header").length) {
+          var firstHeader = () =>
+            this.markers().filter((m) => m.type == "header")[0];
+          return firstHeader().text != ""
+            ? firstHeader().text.toLocaleLowerCase()
+            : "Untitled";
+        }
+      }
       return "Untitled";
     }
 
