@@ -143,7 +143,10 @@ function Project() {
     console.log("Save As Page");
 
     const page = this.page();
-    const path = dialog.showSaveDialogSync(app.win);
+    const path = dialog.showSaveDialogSync({
+      ...app.win,
+      defaultPath: `/${page.name()}.md`,
+    });
 
     if (!path) {
       console.log("Nothing to save");
